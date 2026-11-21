@@ -257,7 +257,7 @@
             <!-- 1. PAGE: WELCOME -->
             <section id="page-welcome" class="page-section active max-w-6xl mx-auto">
                 <div class="relative rounded-3xl overflow-hidden mb-10 shadow-xl bg-primaryDark group min-h-[320px] flex items-center">
-                    <img src="img/Foto smapat.jpeg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80';" alt="SMA Negeri 1 Patianrowo" class="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:scale-105 transition-transform duration-1000">
+                    <img data-smapat-photo="true" src="img/Foto smapat.jpeg" alt="SMA Negeri 1 Patianrowo" class="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:scale-105 transition-transform duration-1000">
                     <div class="absolute inset-0 bg-gradient-to-r from-primaryDark via-primaryDark/85 to-primary/45"></div>
                     
                     <div class="relative z-10 w-full p-8 md:p-12 lg:p-14 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
@@ -333,7 +333,7 @@
                             <i class="ph ph-chart-bar"></i>
                         </div>
                         <h3 class="text-base font-bold text-primaryDark mb-1.5">Pusat Data</h3>
-                        <p class="text-xs text-slate-500 mt-auto">Statistik P1–P4, perbandingan jenjang & dampak.</p>
+                        <p class="text-xs text-slate-500 mt-auto">Statistik P1–P4, perbandingan jenjang & kesimpulan.</p>
                     </div>
 
                     <div onclick="navigateTo('page-kesehatan')" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover-card cursor-pointer group flex flex-col h-full">
@@ -371,8 +371,8 @@
                         <!-- View 1: Foto Gerbang Sekolah -->
                         <div id="schoolPhotoView" class="absolute inset-0 w-full h-full">
                             <img id="schoolProfileImg"
+                                 data-smapat-photo="true"
                                  src="img/Foto smapat.jpeg"
-                                 onerror="this.onerror=null; this.src='https://placehold.co/800x600/004643/F5EEDD?text=SMA+Negeri+1+Patianrowo';"
                                  alt="Gerbang Utama SMA Negeri 1 Patianrowo"
                                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute inset-0 bg-gradient-to-t from-primaryDark/95 via-primaryDark/25 to-black/40 pointer-events-none"></div>
@@ -819,7 +819,7 @@
                 </div>
 
                 <!-- 5. DATA PENGARUH (RINGKASAN DAMPAK KUANTITATIF ANTARVARIABEL & MATRIKS) -->
-                <div class="glass-card p-6 md:p-8 border-t-4 border-t-primaryDark shadow-lg">
+                <div class="glass-card p-6 md:p-8 border-t-4 border-t-primaryDark shadow-lg mb-8">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-100">
                         <div>
                             <span class="px-3 py-1 bg-primary/10 text-primary text-[11px] font-bold rounded-full uppercase tracking-wider inline-block mb-1.5">Temuan #5 • Sintesis Kuantitatif</span>
@@ -935,6 +935,51 @@
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. KESIMPULAN DATA & REKOMENDASI INTERVENSI (BAGIAN PALING AKHIR) -->
+                <div class="glass-card p-6 md:p-8 bg-gradient-to-br from-primaryDark via-slate-900 to-primary text-white shadow-xl border border-primary/40">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-6 pb-4 border-b border-white/15">
+                        <div>
+                            <span class="px-3 py-1 bg-amber-400/20 text-amber-300 border border-amber-400/30 text-[11px] font-bold rounded-full uppercase tracking-wider inline-block mb-1.5">Bagian Akhir • Kesimpulan Data</span>
+                            <h3 class="text-2xl font-extrabold text-white flex items-center gap-2">
+                                <i class="ph-fill ph-check-square-offset text-amber-400"></i> Kesimpulan Data & Rekomendasi Intervensi 7 KAIH
+                            </h3>
+                            <p class="text-sm text-slate-300 mt-1">Sintesis akhir hasil evaluasi 870 siswa SMAN 1 Patianrowo (Periode 1–4) beserta arah tindak lanjut sekolah.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/25 text-emerald-300 flex items-center justify-center text-xl mb-3 border border-emerald-400/30">
+                                <i class="ph-fill ph-trend-up"></i>
+                            </div>
+                            <h4 class="font-bold text-base text-emerald-300 mb-2">1. Tren Positif & Fondasi Kuat</h4>
+                            <p class="text-xs text-slate-200 leading-relaxed">
+                                Implementasi 7 KAIH meningkat konsisten dari <b>75,7%</b> (Periode 1) menjadi <b>78,2%</b> (Periode 4), ditopang kesadaran spiritual ibadah yang sangat tinggi (<b>98,0%</b>) serta kebiasaan gizi seimbang (<b>91,5%</b>).
+                            </p>
+                        </div>
+
+                        <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/25 text-amber-300 flex items-center justify-center text-xl mb-3 border border-amber-400/30">
+                                <i class="ph-fill ph-moon-stars"></i>
+                            </div>
+                            <h4 class="font-bold text-base text-amber-300 mb-2">2. Penentu Utama Kebugaran</h4>
+                            <p class="text-xs text-slate-200 leading-relaxed">
+                                Ketepatan jam tidur (<b>&lt; 22.00 WIB</b>) menjadi faktor paling krusial dalam menjaga kesegaran pagi (<b>78%–80,6%</b> segar), sedangkan begadang disertai layar gawai (<b>&lt; 20 menit</b>) melipatgandakan risiko lemas hingga <b>23,8%–75%</b>.
+                            </p>
+                        </div>
+
+                        <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
+                            <div class="w-10 h-10 rounded-xl bg-sky-500/25 text-sky-300 flex items-center justify-center text-xl mb-3 border border-sky-400/30">
+                                <i class="ph-fill ph-target"></i>
+                            </div>
+                            <h4 class="font-bold text-base text-sky-300 mb-2">3. Fokus Intervensi Terarah</h4>
+                            <p class="text-xs text-slate-200 leading-relaxed">
+                                Program tindak lanjut difokuskan pada peningkatan <b>olahraga rutin</b> (71,2%) dan <b>bermasyarakat</b> (69,4%), pendampingan <b>literasi & gizi Kelas 11</b>, serta tantangan <b>detoks layar 40 menit</b> melalui gamifikasi 7 KAIH.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1464,7 +1509,7 @@
                 <button onclick="closePhotoLightbox()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center font-bold text-lg">&times;</button>
             </div>
             <div class="rounded-2xl overflow-hidden bg-black">
-                <img src="img/Foto smapat.jpeg" onerror="this.onerror=null; this.src='https://placehold.co/1000x600/004643/F5EEDD?text=SMA+Negeri+1+Patianrowo';" alt="Foto Gerbang SMA Negeri 1 Patianrowo" class="w-full h-auto max-h-[75vh] object-contain mx-auto">
+                <img data-smapat-photo="true" src="img/Foto smapat.jpeg" alt="Foto Gerbang SMA Negeri 1 Patianrowo" class="w-full h-auto max-h-[75vh] object-contain mx-auto">
             </div>
             <p class="text-xs text-slate-300 mt-3 px-2 text-center">Jln. PG. Lestari Patianrowo, Kabupaten Nganjuk • Kode Pos 64391</p>
         </div>
@@ -1746,8 +1791,8 @@
         };
 
         window.copySummaryReport = function() {
-            const report = 'Ringkasan Temuan Data 7 KAIH (Periode 1–4) SMAN 1 Patianrowo (Total 870 Siswa): Rata-rata 75,7% (P1) -> 77,0% (P2) -> 75,9% (P3) -> 78,2% (P4). Capaian P4: Gizi Seimbang 91,5%, Literasi 83,0%, Tidur Awal 81,0%, Bangun Pagi 79,0%, Ibadah 74,5% (Kesadaran 98,0%), Olahraga 71,2%, Bermasyarakat 69,4%. Data Pengaruh: Tidur <22.00 + Jeda Layar >40m = 80,6% Segar; Tidur <22.00 + Olahraga = 78,0% Segar; Begadang >22.00 + Layar <20m = 23,8% Lemas/Sakit.';
-            copyText(report, 'Ringkasan Temuan Data 7 KAIH (Periode 1–4) berhasil disalin ke clipboard!');
+            const report = 'Ringkasan Temuan Data 7 KAIH (Periode 1–4) SMAN 1 Patianrowo (Total 870 Siswa): Rata-rata 75,7% (P1) -> 77,0% (P2) -> 75,9% (P3) -> 78,2% (P4). Capaian P4: Gizi Seimbang 91,5%, Literasi 83,0%, Tidur Awal 81,0%, Bangun Pagi 79,0%, Ibadah 74,5% (Kesadaran 98,0%), Olahraga 71,2%, Bermasyarakat 69,4%. Data Pengaruh: Tidur <22.00 + Jeda Layar >40m = 80,6% Segar; Tidur <22.00 + Olahraga = 78,0% Segar; Begadang >22.00 + Layar <20m = 23,8% Lemas/Sakit. Kesimpulan: Ketepatan jam tidur (<22.00 WIB) dan detoks layar >40 menit adalah kunci utama kebugaran pagi siswa.';
+            copyText(report, 'Ringkasan Temuan & Kesimpulan Data 7 KAIH berhasil disalin!');
         };
 
         // Interactive Health Calculators
@@ -2929,6 +2974,27 @@
                 ctx.fillText(`${b.icon} ${b.name}`, b.x + b.w / 2, b.y + 27);
             });
 
+            // Pohon-pohon rindang kampus
+            trees.forEach(t => {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.16)';
+                ctx.beginPath();
+                ctx.ellipse(t.x, t.y + 18, 18, 8, 0, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.fillStyle = '#78350f';
+                ctx.fillRect(t.x - 5, t.y, 10, 18);
+
+                ctx.fillStyle = '#15803d';
+                ctx.beginPath();
+                ctx.arc(t.x, t.y - 8, 22, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.fillStyle = '#22c55e';
+                ctx.beginPath();
+                ctx.arc(t.x - 5, t.y - 12, 14, 0, Math.PI * 2);
+                ctx.fill();
+            });
+
             // Zona Lingkaran Toko Market Kopsis
             const pulse = Math.sin(animTick * 0.08) * 5;
             ctx.fillStyle = 'rgba(245, 158, 11, 0.28)';
@@ -3616,7 +3682,7 @@
 
         function renderRedeemedVouchers() {
             const listEl = document.getElementById('redeemed-vouchers-list');
-            if (playerState.redeemedVouchers.length === 0) return;
+            if (!listEl || playerState.redeemedVouchers.length === 0) return;
 
             listEl.innerHTML = '';
             playerState.redeemedVouchers.forEach(v => {
@@ -3630,38 +3696,37 @@
                                     <i class="ph-fill ph-crown"></i>
                                 </div>
                                 <div>
-                                    <span class="text-[10px] font-extrabold uppercase tracking-wider bg-purple-600 text-white px-2 py-0.5 rounded">Hadiah Eksklusif Game Dev</span>
-                                    <p class="font-bold text-sm text-primaryDark mt-0.5">${v.name}</p>
-                                    <p class="text-xs text-slate-600">${v.detail}</p>
+                                    <span class="text-[10px] font-extrabold uppercase tracking-wider text-purple-700 bg-purple-200/70 px-2 py-0.5 rounded-full">Hadiah Eksklusif Developer • ${v.time}</span>
+                                    <p class="font-extrabold text-sm text-slate-900 mt-1">${v.name}</p>
+                                    <p class="text-[11px] text-slate-600">${v.detail}</p>
                                 </div>
                             </div>
-                            <button onclick="copyText('${v.code} | ${v.certificateCode}', 'Kode voucher & sertifikat disalin!')" class="font-mono font-extrabold text-xs bg-white hover:bg-purple-50 text-purple-700 px-3 py-1.5 rounded-lg border border-purple-300 tracking-wider flex items-center gap-1.5 self-start sm:self-auto shrink-0">
-                                <span>${v.code}</span>
-                                <i class="ph ph-copy text-sm"></i>
+                            <button onclick="copyText('${v.code} | ${v.certificateCode}', 'Kode Voucher & Sertifikat berhasil disalin!')" class="self-start sm:self-center shrink-0 bg-purple-600 hover:bg-purple-700 text-white px-3.5 py-2 rounded-xl text-xs font-extrabold shadow-sm flex items-center gap-1.5 transition-colors">
+                                <i class="ph ph-copy"></i> ${v.code}
                             </button>
                         </div>
-                        <div class="bg-white/90 border border-amber-300 rounded-xl px-3.5 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
-                            <span class="font-bold text-amber-800 flex items-center gap-1.5">
-                                <i class="ph-fill ph-certificate text-amber-500 text-base"></i> ${v.certificateTitle}
-                            </span>
-                            <span class="font-mono font-bold text-slate-600">No. Sertifikat: ${v.certificateCode}</span>
+                        <div class="bg-white/90 border border-purple-200 rounded-xl p-3 flex flex-wrap items-center justify-between gap-2 text-xs">
+                            <div class="flex items-center gap-2 text-purple-900 font-bold">
+                                <i class="ph-fill ph-certificate text-amber-500 text-lg"></i>
+                                <span>${v.certificateTitle}</span>
+                            </div>
+                            <span class="font-mono text-[11px] font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded">${v.certificateCode}</span>
                         </div>
                     `;
                 } else {
-                    item.className = 'flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 bg-emerald-50/70 border border-emerald-200 rounded-xl';
+                    item.className = 'p-3.5 bg-emerald-50/60 border border-emerald-200 rounded-2xl flex items-center justify-between gap-3';
                     item.innerHTML = `
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-emerald-500 text-white rounded-xl flex items-center justify-center text-xl shrink-0">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <div class="w-10 h-10 bg-emerald-500 text-white rounded-xl flex items-center justify-center text-lg shrink-0">
                                 <i class="ph-fill ph-ticket"></i>
                             </div>
-                            <div>
-                                <p class="font-bold text-sm text-primaryDark">${v.name}</p>
-                                <p class="text-xs text-slate-500">Ditukar pukul ${v.time} (${v.cost} Koin)</p>
+                            <div class="min-w-0">
+                                <p class="font-bold text-sm text-slate-800 truncate">${v.name}</p>
+                                <p class="text-[11px] text-slate-500">Ditukar pukul ${v.time} • ${v.cost} Koin</p>
                             </div>
                         </div>
-                        <button onclick="copyText('${v.code}', 'Kode voucher ${v.code} disalin!')" class="font-mono font-extrabold text-xs bg-white hover:bg-emerald-50 text-emerald-700 px-3 py-1.5 rounded-lg border border-emerald-300 tracking-wider flex items-center gap-1.5 self-start sm:self-auto">
-                            <span>${v.code}</span>
-                            <i class="ph ph-copy text-sm"></i>
+                        <button onclick="copyText('${v.code}', 'Kode voucher ${v.code} berhasil disalin!')" class="shrink-0 bg-white hover:bg-emerald-600 hover:text-white text-emerald-700 border border-emerald-300 px-3 py-1.5 rounded-xl text-xs font-extrabold transition-colors flex items-center gap-1.5">
+                            <i class="ph ph-copy"></i> ${v.code}
                         </button>
                     `;
                 }
@@ -3670,102 +3735,215 @@
         }
 
         function updateGameUI() {
-            document.getElementById('player-level').innerText = `Lv. ${playerState.level}`;
-            document.getElementById('sidebar-level-badge').innerText = `Lv. ${playerState.level}`;
-            document.getElementById('player-exp').innerText = `${playerState.exp} / ${EXP_PER_LEVEL}`;
-            document.getElementById('player-vouchers-count').innerText = playerState.redeemedVouchers.length;
+            const coinsStr = playerState.coins.toString();
+            const elPlayerCoins = document.getElementById('player-coins');
+            const elSidebarCoins = document.getElementById('sidebar-coins');
+            const elMobileCoins = document.getElementById('mobile-header-coins');
+            const elMarketCoins = document.getElementById('market-coins-display');
 
-            const keyEl = document.getElementById('player-keys-count');
-            if (keyEl) keyEl.innerText = playerState.secretKeys;
+            if (elPlayerCoins) elPlayerCoins.innerText = coinsStr;
+            if (elSidebarCoins) elSidebarCoins.innerText = coinsStr;
+            if (elMobileCoins) elMobileCoins.innerText = coinsStr;
+            if (elMarketCoins) elMarketCoins.innerText = coinsStr;
 
-            const doneCount = Object.keys(playerState.completedQuests).length;
-            const qBadge = document.getElementById('quest-progress-badge');
-            if (qBadge) qBadge.innerText = `Quest: ${doneCount}/${npcs.length}`;
+            const elKeys = document.getElementById('player-keys-count');
+            if (elKeys) elKeys.innerText = playerState.secretKeys;
 
-            const coinEls = [
-                document.getElementById('player-coins'),
-                document.getElementById('market-coins-display'),
-                document.getElementById('sidebar-coins'),
-                document.getElementById('mobile-header-coins')
+            const elVouchers = document.getElementById('player-vouchers-count');
+            if (elVouchers) elVouchers.innerText = playerState.redeemedVouchers.length;
+
+            const elLevel = document.getElementById('player-level');
+            const elSidebarLevel = document.getElementById('sidebar-level-badge');
+            if (elLevel) elLevel.innerText = `Lv. ${playerState.level}`;
+            if (elSidebarLevel) elSidebarLevel.innerText = `Lv. ${playerState.level}`;
+
+            const completedCount = Object.keys(playerState.completedQuests).length;
+            const elQuestBadge = document.getElementById('quest-progress-badge');
+            if (elQuestBadge) elQuestBadge.innerText = `Quest: ${completedCount}/${npcs.length}`;
+
+            const elExp = document.getElementById('player-exp');
+            const elExpBar = document.getElementById('exp-progress');
+            if (elExp) elExp.innerText = `${playerState.exp} / ${EXP_PER_LEVEL}`;
+            if (elExpBar) {
+                const pct = Math.min(100, Math.round((playerState.exp / EXP_PER_LEVEL) * 100));
+                elExpBar.style.width = `${pct}%`;
+            }
+        }
+
+        function loadLeaderboard() {
+            const tbody = document.getElementById('leaderboard-body');
+            if (!tbody) return;
+
+            const totalExp = (playerState.level - 1) * EXP_PER_LEVEL + playerState.exp;
+            const players = [
+                { name: 'Nabila Putri (XI-IPA 1)', level: 4, exp: 340, isUser: false },
+                { name: 'Rizky Pratama (XII-IPS 2)', level: 3, exp: 265, isUser: false },
+                { name: 'Aulia Rahma (X-E 4)', level: 3, exp: 210, isUser: false },
+                { name: 'Dimas Saputra (XI-IPS 1)', level: 2, exp: 155, isUser: false },
+                { name: 'Siswa Hebat (Kamu)', level: playerState.level, exp: totalExp, isUser: true }
             ];
-            coinEls.forEach(el => { if (el) el.innerText = playerState.coins; });
 
-            const mainCoinEl = document.getElementById('player-coins');
-            const walletCard = document.getElementById('coin-wallet-card');
-            if (playerState.coins < 0) {
-                mainCoinEl.className = 'font-extrabold text-xl text-rose-400';
-                walletCard.className = 'bg-rose-500/20 backdrop-blur-md rounded-2xl p-3 text-center border border-rose-400/50 min-w-[95px] transition-colors';
-            } else {
-                mainCoinEl.className = 'font-extrabold text-xl text-amber-300';
-                walletCard.className = 'bg-white/10 backdrop-blur-md rounded-2xl p-3 text-center border border-white/20 min-w-[95px] transition-colors';
-            }
+            players.sort((a, b) => b.exp - a.exp);
 
-            const progressWidth = (playerState.exp / EXP_PER_LEVEL) * 100;
-            document.getElementById('exp-progress').style.width = `${progressWidth}%`;
-        }
+            tbody.innerHTML = players.map((p, idx) => {
+                const rank = idx + 1;
+                let rankBadge = `<span class="font-bold text-slate-500">#${rank}</span>`;
+                if (rank === 1) rankBadge = `<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-100 text-amber-700 font-extrabold text-xs">🥇 1</span>`;
+                if (rank === 2) rankBadge = `<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-200 text-slate-700 font-extrabold text-xs">🥈 2</span>`;
+                if (rank === 3) rankBadge = `<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-orange-100 text-orange-700 font-extrabold text-xs">🥉 3</span>`;
 
-        // --- LOGIKA API LEADERBOARD ---
-        const API_URL = 'https://api.sman1patianrowo.sch.id/v1/leaderboard';
-        const API_KEY = 'KAIH_PROD_KEY_987654321';
-
-        async function loadLeaderboard() {
-            const tbody = document.getElementById('leaderboard-body');
-            try {
-                const response = await fetch(API_URL, {
-                    method: 'GET',
-                    headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY }
-                });
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                const data = await response.json();
-                renderLeaderboard(data);
-            } catch (error) {
-                const myExp = ((playerState.level - 1) * EXP_PER_LEVEL) + playerState.exp;
-                const dummyData = [
-                    { id: 'U001', nama: 'Budi Santoso', kelas: 'XII-IPA 1', level: 15, exp: 1450 },
-                    { id: 'U002', nama: 'Siti Aminah', kelas: 'XI-IPS 2', level: 14, exp: 1320 },
-                    { id: 'U003', nama: 'Agus Pratama', kelas: 'X-1', level: 12, exp: 1150 },
-                    { id: 'U004', nama: 'Rina Wijaya', kelas: 'XII-IPA 3', level: 10, exp: 980 },
-                    { id: 'U_ME', nama: 'Siswa Hebat (Anda)', kelas: 'Akses Publik', level: playerState.level, exp: myExp }
-                ];
-                dummyData.sort((a, b) => b.exp - a.exp);
-                renderLeaderboard(dummyData);
-            }
-        }
-
-        function renderLeaderboard(data) {
-            const tbody = document.getElementById('leaderboard-body');
-            tbody.innerHTML = '';
-            data.forEach((player, index) => {
-                let rankIcon = `<span class="font-bold text-slate-400 text-lg">${index + 1}</span>`;
-                if (index === 0) rankIcon = `<i class="ph-fill ph-medal text-4xl text-amber-400 drop-shadow-md"></i>`;
-                else if (index === 1) rankIcon = `<i class="ph-fill ph-medal text-4xl text-slate-300 drop-shadow-md"></i>`;
-                else if (index === 2) rankIcon = `<i class="ph-fill ph-medal text-4xl text-amber-700 drop-shadow-md"></i>`;
-
-                const isMe = player.nama.includes('(Anda)');
-                const bgClass = isMe ? 'bg-primary/5 border-l-4 border-l-primary' : 'hover:bg-slate-50 border-l-4 border-l-transparent';
-
-                const tr = document.createElement('tr');
-                tr.className = `border-b border-slate-100 transition-colors ${bgClass}`;
-                tr.innerHTML = `
-                    <td class="py-4 text-center">${rankIcon}</td>
-                    <td class="py-4 pl-4">
-                        <p class="font-bold text-sm md:text-base ${isMe ? 'text-primaryDark' : 'text-slate-700'}">${player.nama}</p>
-                        <p class="text-xs font-medium text-slate-400 mt-0.5"><i class="ph-fill ph-student text-primary/50 mr-1"></i>${player.kelas}</p>
-                    </td>
-                    <td class="py-4 text-center">
-                        <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-xs font-bold border border-slate-200">Lv. ${player.level}</span>
-                    </td>
-                    <td class="py-4 text-right pr-4">
-                        <span class="font-black text-lg ${isMe ? 'text-primary' : 'text-amber-500'}">${player.exp.toLocaleString()}</span>
-                        <span class="text-[10px] uppercase font-bold text-slate-400 ml-1">EXP</span>
-                    </td>
+                return `
+                    <tr class="border-b border-slate-100 ${p.isUser ? 'bg-primary/5 font-bold' : 'hover:bg-slate-50'} transition-colors">
+                        <td class="py-3.5 text-center">${rankBadge}</td>
+                        <td class="py-3.5 pl-4 text-sm ${p.isUser ? 'text-primaryDark font-extrabold' : 'text-slate-700'}">
+                            ${p.name} ${p.isUser ? '<span class="ml-1.5 text-[10px] bg-primary text-white px-2 py-0.5 rounded-full">Anda</span>' : ''}
+                        </td>
+                        <td class="py-3.5 text-center">
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">Lv. ${p.level}</span>
+                        </td>
+                        <td class="py-3.5 text-right pr-4 text-sm font-extrabold text-primary">${p.exp} EXP</td>
+                    </tr>
                 `;
-                tbody.appendChild(tr);
-            });
+            }).join('');
         }
 
-        // Dynamic Greeting Initialization
+        // Dynamic Greeting Initialization & Embedded School Gate Illustration
+        function createEmbeddedSmapatGateDataUrl() {
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 415" width="1024" height="415">
+                <defs>
+                    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#c7d8c6"/>
+                        <stop offset="100%" stop-color="#6b8e5e"/>
+                    </linearGradient>
+                    <linearGradient id="roofGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#9e3b33"/>
+                        <stop offset="50%" stop-color="#7c2822"/>
+                        <stop offset="100%" stop-color="#4e1612"/>
+                    </linearGradient>
+                    <linearGradient id="boardGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#2b2118"/>
+                        <stop offset="100%" stop-color="#17110c"/>
+                    </linearGradient>
+                    <linearGradient id="frameGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#f3a35c"/>
+                        <stop offset="100%" stop-color="#c97132"/>
+                    </linearGradient>
+                </defs>
+                <!-- Latar Pepohonan & Langit -->
+                <rect width="1024" height="415" fill="url(#skyGrad)"/>
+                <circle cx="90" cy="80" r="110" fill="#2d4c23"/>
+                <circle cx="210" cy="65" r="95" fill="#3b612e"/>
+                <circle cx="830" cy="60" r="105" fill="#355829"/>
+                <circle cx="950" cy="85" r="115" fill="#25421c"/>
+                <rect x="0" y="160" width="1024" height="255" fill="#1e3518"/>
+
+                <!-- Pilar Hijau Muda Gerbang -->
+                <rect x="55" y="165" width="46" height="225" fill="#b7d5ac" stroke="#364f2e" stroke-width="2"/>
+                <rect x="372" y="88" width="28" height="295" fill="#cde3c3" stroke="#364f2e" stroke-width="2"/>
+                <rect x="624" y="88" width="28" height="295" fill="#cde3c3" stroke="#364f2e" stroke-width="2"/>
+                <rect x="923" y="165" width="46" height="225" fill="#b7d5ac" stroke="#364f2e" stroke-width="2"/>
+
+                <!-- Atap Sayap Kiri & Kanan -->
+                <path d="M5,165 L95,88 L405,88 L405,165 Z" fill="url(#roofGrad)" stroke="#3b110e" stroke-width="3"/>
+                <path d="M619,88 L929,88 L1019,165 L619,165 Z" fill="url(#roofGrad)" stroke="#3b110e" stroke-width="3"/>
+                <!-- Lis Putih Bawah Atap -->
+                <rect x="12" y="162" width="388" height="10" fill="#e8ece6"/>
+                <rect x="624" y="162" width="388" height="10" fill="#e8ece6"/>
+
+                <!-- Atap Mahkota Tengah -->
+                <path d="M278,35 L335,0 L689,0 L746,35 L710,52 L314,52 Z" fill="url(#roofGrad)" stroke="#3b110e" stroke-width="3"/>
+                <rect x="320" y="50" width="384" height="10" fill="#eef2ec"/>
+                <rect x="368" y="60" width="288" height="32" fill="#3a2a22"/>
+
+                <!-- Papan Utama Tengah: SMA NEGERI 1 PATIANROWO NGANJUK -->
+                <rect x="404" y="106" width="216" height="176" rx="4" fill="url(#frameGrad)" stroke="#5c2d0c" stroke-width="2.5"/>
+                <rect x="415" y="117" width="194" height="154" fill="url(#boardGrad)" stroke="#f6c28b" stroke-width="1.5"/>
+                <!-- Logo Provinsi Jatim Mini -->
+                <rect x="504" y="124" width="16" height="20" rx="3" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+                <circle cx="512" cy="133" r="4" fill="#1d4ed8"/>
+                <text x="512" y="156" fill="#f8fafc" font-family="Georgia, serif" font-size="7.2" font-weight="bold" text-anchor="middle" letter-spacing="0.4">PEMERINTAH PROVINSI JAWA TIMUR</text>
+                <text x="512" y="166" fill="#e2e8f0" font-family="Georgia, serif" font-size="7.2" font-weight="bold" text-anchor="middle" letter-spacing="0.5">DINAS PENDIDIKAN</text>
+                <text x="512" y="187" fill="#ffffff" font-family="Georgia, serif" font-size="16" font-weight="bold" text-anchor="middle" letter-spacing="0.6">SMA NEGERI 1</text>
+                <text x="512" y="204" fill="#ffffff" font-family="Georgia, serif" font-size="12.5" font-weight="bold" text-anchor="middle" letter-spacing="0.8">PATIANROWO</text>
+                <text x="512" y="218" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="6.3" text-anchor="middle">Jln. PG. LESTARI Patianrowo, Telp. (0358) 551594</text>
+                <text x="512" y="227" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="6.3" text-anchor="middle">Email : sman1patianrowo@yahoo.com</text>
+                <text x="512" y="248" fill="#ffffff" font-family="Georgia, serif" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="1.2">NGANJUK</text>
+                <text x="580" y="264" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="5.5" text-anchor="middle">KODE POS : 64391</text>
+
+                <!-- Bingkai Papan Kiri (KORPRI, PGRI, DHARMA WANITA) -->
+                <rect x="106" y="214" width="268" height="104" rx="4" fill="url(#frameGrad)" stroke="#5c2d0c" stroke-width="2"/>
+                <rect x="115" y="222" width="250" height="88" fill="#f7c894"/>
+                <!-- Panel 1: KORPRI -->
+                <rect x="122" y="228" width="74" height="76" fill="url(#boardGrad)" stroke="#d97706" stroke-width="1"/>
+                <circle cx="159" cy="246" r="9" fill="#fbbf24"/>
+                <text x="159" y="270" fill="#ffffff" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" text-anchor="middle">KORPRI</text>
+                <text x="159" y="280" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="5.5" text-anchor="middle">SUB UNIT</text>
+                <text x="159" y="290" fill="#ffffff" font-family="Arial, sans-serif" font-size="6.2" font-weight="bold" text-anchor="middle">SMA NEGERI 1</text>
+                <text x="159" y="298" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="5" text-anchor="middle">PATIANROWO</text>
+                <!-- Panel 2: PGRI -->
+                <rect x="203" y="228" width="74" height="76" fill="url(#boardGrad)" stroke="#d97706" stroke-width="1"/>
+                <circle cx="240" cy="246" r="9" fill="#f87171"/>
+                <text x="240" y="270" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">PGRI</text>
+                <text x="240" y="280" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="5.5" text-anchor="middle">RANTING</text>
+                <text x="240" y="290" fill="#ffffff" font-family="Arial, sans-serif" font-size="6.2" font-weight="bold" text-anchor="middle">SMA NEGERI 1</text>
+                <text x="240" y="298" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="5" text-anchor="middle">PATIANROWO</text>
+                <!-- Panel 3: DHARMA WANITA -->
+                <rect x="284" y="228" width="74" height="76" fill="url(#boardGrad)" stroke="#d97706" stroke-width="1"/>
+                <circle cx="321" cy="246" r="9" fill="#34d399"/>
+                <text x="321" y="269" fill="#ffffff" font-family="Arial, sans-serif" font-size="6.5" font-weight="bold" text-anchor="middle">DHARMA WANITA</text>
+                <text x="321" y="279" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="5.5" text-anchor="middle">RANTING</text>
+                <text x="321" y="289" fill="#ffffff" font-family="Arial, sans-serif" font-size="6.2" font-weight="bold" text-anchor="middle">SMA NEGERI 1</text>
+                <text x="321" y="297" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="5" text-anchor="middle">PATIANROWO</text>
+
+                <!-- Bingkai Papan Kanan (OSIS, PRAMUKA, PMR) -->
+                <rect x="650" y="214" width="268" height="104" rx="4" fill="url(#frameGrad)" stroke="#5c2d0c" stroke-width="2"/>
+                <rect x="659" y="222" width="250" height="88" fill="#f7c894"/>
+                <!-- Panel 4: OSIS -->
+                <rect x="666" y="228" width="74" height="76" fill="url(#boardGrad)" stroke="#d97706" stroke-width="1"/>
+                <circle cx="703" cy="246" r="9" fill="#fbbf24"/>
+                <text x="703" y="271" fill="#ffffff" font-family="Arial, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">OSIS</text>
+                <text x="703" y="284" fill="#ffffff" font-family="Arial, sans-serif" font-size="6.5" font-weight="bold" text-anchor="middle">SMA NEGERI 1</text>
+                <text x="703" y="294" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="5.2" text-anchor="middle">PATIANROWO</text>
+                <!-- Panel 5: PRAMUKA -->
+                <rect x="747" y="228" width="74" height="76" fill="url(#boardGrad)" stroke="#d97706" stroke-width="1"/>
+                <circle cx="784" cy="246" r="9" fill="#f59e0b"/>
+                <text x="784" y="270" fill="#ffffff" font-family="Arial, sans-serif" font-size="8.8" font-weight="bold" text-anchor="middle">PRAMUKA</text>
+                <text x="784" y="280" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="5.5" text-anchor="middle">Gudep</text>
+                <text x="784" y="290" fill="#ffffff" font-family="Arial, sans-serif" font-size="6.2" font-weight="bold" text-anchor="middle">SMA NEGERI 1</text>
+                <text x="784" y="298" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="5" text-anchor="middle">PATIANROWO</text>
+                <!-- Panel 6: PMR -->
+                <rect x="828" y="228" width="74" height="76" fill="url(#boardGrad)" stroke="#d97706" stroke-width="1"/>
+                <circle cx="865" cy="246" r="9" fill="#60a5fa"/>
+                <text x="865" y="271" fill="#ffffff" font-family="Arial, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">PMR</text>
+                <text x="865" y="284" fill="#ffffff" font-family="Arial, sans-serif" font-size="6.5" font-weight="bold" text-anchor="middle">SMA NEGERI 1</text>
+                <text x="865" y="294" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="5.2" text-anchor="middle">PATIANROWO</text>
+
+                <!-- Taman & Tanaman Hias Depan Gerbang -->
+                <ellipse cx="140" cy="395" rx="150" ry="42" fill="#3f6212"/>
+                <ellipse cx="320" cy="400" rx="135" ry="38" fill="#4d7c0f"/>
+                <ellipse cx="730" cy="398" rx="145" ry="42" fill="#365314"/>
+                <ellipse cx="905" cy="392" rx="155" ry="46" fill="#4d7c0f"/>
+                <!-- Bunga Putih Kecil di Semak -->
+                <circle cx="95" cy="378" r="3" fill="#ffffff"/><circle cx="135" cy="372" r="3" fill="#fef08a"/><circle cx="185" cy="382" r="3" fill="#ffffff"/>
+                <circle cx="290" cy="380" r="3" fill="#ffffff"/><circle cx="345" cy="376" r="3" fill="#fef08a"/><circle cx="715" cy="375" r="3" fill="#ffffff"/>
+                <circle cx="860" cy="372" r="3" fill="#fef08a"/><circle cx="920" cy="378" r="3" fill="#ffffff"/><circle cx="965" cy="385" r="3" fill="#ffffff"/>
+            </svg>`;
+            return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
+            const fallbackGateUrl = createEmbeddedSmapatGateDataUrl();
+            document.querySelectorAll('img[data-smapat-photo="true"]').forEach(img => {
+                img.addEventListener('error', function() {
+                    if (this.src !== fallbackGateUrl) {
+                        this.src = fallbackGateUrl;
+                    }
+                });
+                if (img.complete && img.naturalWidth === 0) {
+                    img.src = fallbackGateUrl;
+                }
+            });
+
             const hour = new Date().getHours();
             const greetingEl = document.getElementById('dynamicGreeting');
             if (greetingEl) {
